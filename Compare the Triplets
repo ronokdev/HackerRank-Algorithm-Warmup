@@ -1,0 +1,50 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int a0 = in.nextInt();
+        int a1 = in.nextInt();
+        int a2 = in.nextInt();
+        int b0 = in.nextInt();
+        int b1 = in.nextInt();
+        int b2 = in.nextInt();
+       int alice_score = 0 , bob_score =0;
+      
+     
+      if(a0 < b0)
+        {
+              bob_score++;
+        }
+      if(a0>b0)
+        {
+            alice_score++;
+        }
+      if(a1 < b1)
+        {
+              bob_score++;
+        }
+       if(a1>b1)
+        {
+            alice_score++;
+        }
+      if(a2 < b2)
+        {
+              bob_score++;
+        }
+       if(a2>b2)
+        {
+            alice_score++;
+        }
+      
+      System.out.print(alice_score+" "+bob_score);
+      
+    }
+  
+  
+}
