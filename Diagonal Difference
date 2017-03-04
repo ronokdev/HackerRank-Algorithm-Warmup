@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+       int sum=0,sum_2 = 0,result=0;
+        int n = in.nextInt();
+        int a[][] = new int[n][n];
+        for(int a_i=0; a_i < n; a_i++){
+            for(int a_j=0; a_j < n; a_j++){
+                a[a_i][a_j] = in.nextInt();
+            }
+        }
+      
+        for(int a_i=0,a_j=0; a_i < n && a_j < n; a_i++,a_j++){
+                 //  System.out.println(a[a_i][a_j]);
+                  sum = sum+a[a_i][a_j];
+            }
+       //    System.out.println("sum 1 : "+sum);
+        
+      for(int a_i=0,a_j=n-1; a_i < n && a_j >= 0; a_i++,a_j--){
+                  // System.out.println(a[a_i][a_j]);
+                  sum_2= sum_2+a[a_i][a_j];
+            }
+       //System.out.println("sum 2 : "+sum_2);
+        
+      result = (sum - sum_2);
+      if(result < 0)
+        {
+            result = - result;
+         }
+      
+       System.out.println(result);
+      } 
+    }
+
