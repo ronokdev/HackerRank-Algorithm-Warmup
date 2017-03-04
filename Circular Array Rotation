@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt(); // how many number -- 3
+        int k = in.nextInt(); // how many rotation -- 2
+        int q = in.nextInt();
+        int[] a = new int[n];
+        int[] b = new int[n];
+        int index_number_after_rotation;
+        for(int a_i=0; a_i < n; a_i++){
+            a[a_i] = in.nextInt();
+        }
+        for(int a0 = 0; a0 < q; a0++){
+            int m = in.nextInt();// 0 1 2
+            System.out.println(a[(((m-k)%n)+n)%n]);
+               
+                }
+        }
+    }
+
