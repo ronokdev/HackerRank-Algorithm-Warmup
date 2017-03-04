@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        
+        for(int i =1 ;i<=n;i++ )
+            {
+            int j = i;
+            int c =n-j;
+            while(j>=1)
+                     {
+                                 while(c >=1)
+                                 {  System.out.print(" ");
+                                     c--;
+                                 }
+                                 System.out.print("#");
+                                 j--;
+                     }
+            System.out.println();
+            }
+    }
+}
