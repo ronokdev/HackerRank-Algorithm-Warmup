@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int pos_counter = 0; int neg_counter =  0; int zero_counter =0;
+        int n = in.nextInt();
+        int arr[] = new int[n];
+        for(int arr_i=0; arr_i < n; arr_i++){
+            arr[arr_i] = in.nextInt();
+        }
+        for(int arr_i=0; arr_i < n; arr_i++){
+                if(arr[arr_i] > 0){pos_counter++;}
+                if(arr[arr_i] < 0){neg_counter++;}
+                if(arr[arr_i] == 0){zero_counter++;}
+        }
+        
+        double res_1 = (float)pos_counter/n;
+        
+        double res_2 = (float)neg_counter/n;
+        
+        double res_3 = (float)zero_counter/n;
+        
+        System.out.println(new DecimalFormat("##.#####").format(res_1));
+        System.out.println(new DecimalFormat("##.#####").format(res_2));
+        System.out.println(new DecimalFormat("##.#####").format(res_3));
+      
+        
+    }
+}
