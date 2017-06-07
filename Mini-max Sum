@@ -1,0 +1,57 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package hackerrank;
+
+import java.io.*;
+import java.util.*;
+
+
+/**
+ *
+ * @author ronok
+ */
+
+public class HackerRanmini_max_sum {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       
+        long smallSum=0,bigSum=0,result=0,temp=0;
+        int arr_j =0,z=0;
+        Scanner in = new Scanner(System.in);
+        int[] arr = new int[5];
+        long[] resultSecond = new long[5];
+        
+        for(int arr_i=0;arr_i<5;arr_i++){
+            arr[arr_i] = in.nextInt();
+        }
+        
+        int arrayLength = arr.length;
+        
+        while(arrayLength > 0){
+            
+            for(arr_j=0;arr_j<=arr.length-1;arr_j++)
+            {       
+                if(arr_j != arrayLength-1){
+                    result = result+arr[arr_j];
+                }
+            }
+            resultSecond[z] = result;
+            z++;
+            arrayLength--;
+            result =0;
+           
+        }
+        Arrays.sort(resultSecond);
+        System.out.println(resultSecond[0]+" "+resultSecond[resultSecond.length-1]);
+        
+        
+        
+    }
+    
+}
