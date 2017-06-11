@@ -1,0 +1,47 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package hackerrank;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+/**
+ *
+ * @author ronok
+ */
+public class birthday_cake_candles {
+    
+   
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int ar_i;
+        int n = sc.nextInt();
+        int[] arra_y = new int[n];
+
+        for(ar_i =0;ar_i<n;ar_i++){
+            arra_y[ar_i] = sc.nextInt();
+        }
+        
+        int result = birthdayCakeCandles(n, arra_y);
+        System.out.println(result);
+    }
+    
+    static int birthdayCakeCandles(int a , int[] ar){
+            Arrays.sort(ar);
+            int Counter=1;
+            int array_length = ar.length;
+            int maxCandelNumber = ar[array_length-1];
+            for(int z=0;z<array_length-1;z++){
+                if(ar[z] == maxCandelNumber){
+                    Counter++;
+                }
+            }
+            return Counter;
+            
+    }
+}
+
